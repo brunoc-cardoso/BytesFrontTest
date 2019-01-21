@@ -12,17 +12,53 @@ export class TimerComponent implements OnInit {
   faPlay = faPlay;
   faStop = faStop;
 
+  control = null;
+  milliseconds = 0;
+  seconds = 0;
+  minutes = 0;
+
   constructor() { }
 
   ngOnInit() {
   }
 
   stopwatch() {
-    // TODO
+    // milleseconds
+    if (this.milliseconds < 99) {
+      this.milliseconds++;
+      if (this.milliseconds < 10) { this.milliseconds += 0; }
+      // component receives data
+    }
+    if (this.milliseconds === 99) {
+      this.milliseconds = -1;
+    }
+
+    // seconds
+    if (this.seconds === 0) {
+      this.seconds++;
+      if (this.seconds < 10) { this.seconds += 0; }
+      // component receives data
+    }
+    if (this.seconds === 59) {
+      this.seconds = -1;
+    }
+
+    // minutes
+    if (this.minutes === 0 && this.seconds === 0) {
+      this.minutes++;
+      if (this.minutes < 10) { this.minutes += 0; }
+      // component receives data
+    }
+    if (this.minutes === 59) {
+      this.minutes = -1;
+    }
+
+    // show time
+    console.log(this.minutes + ':' + this.seconds + ':' + this.milliseconds);
   }
 
   startStopwatch() {
-    // TODO
+    this.control = setInterval(this.stopwatch, 1000);
   }
 
   pauseStopwatch() {

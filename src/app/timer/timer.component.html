@@ -4,7 +4,11 @@
   </div>
   <div class="card-body">
 
-    <h3>00:00 000</h3>
+    <div id="stopwatch" class="row">
+      <h2 id="minutes">{{minutes}}</h2>
+      <h2 id="seconds">:{{seconds}}</h2>
+      <span id="milliseconds" class="pl-1"> {{milliseconds}}</span>
+    </div>
     
     <!-- buttons -->
     <a href="#" class="btn btn-primary btn-block btn-timer" (click)=startStopwatch()>
