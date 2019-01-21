@@ -1,3 +1,21 @@
-<p>
-  timer works!
-</p>
+<div class="card col-3">
+  <div class="card-header">
+    Timer
+  </div>
+  <div class="card-body">
+
+    <h3>00:00 000</h3>
+    
+    <!-- buttons -->
+    <a href="#" class="btn btn-primary btn-block btn-timer" (click)=startStopwatch()>
+      <fa-icon [icon]="faPlay"></fa-icon> Start
+    </a>
+    <a href="#" class="btn btn-primary btn-block btn-timer" (click)=startStopwatch()>
+      <fa-icon [icon]="faPause"></fa-icon> Pause
+    </a>
+    <a href="#" class="btn btn-danger btn-block btn-timer" (click)=startStopwatch()>
+      <fa-icon [icon]="faStop"></fa-icon> Restart
+    </a>
+    
+  </div>
+</div>
