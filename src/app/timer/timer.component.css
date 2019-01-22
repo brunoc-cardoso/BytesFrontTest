@@ -1,3 +1,29 @@
-.btn-timer {
-  width: 40%;
+.card {
+  background: #EEF5FD;
+  border-color: #2460A9;
+  padding: 0px;
+}
+
+.card-header {
+  background: #2460A9;
+}
+
+.card-body {
+  color: rgb(0, 0, 0);
+}
+
+.btn-primary {
+  color: #2460A9;
+  border-color: #2460A9;
+  background: #C4DDF3;
+}
+
+.btn-danger {
+  color: #772929;
+  border-color: #772929;
+  background: #F4A4A5;
+}
+
+.btn {
+  width: 100px;
 }

@@ -12,7 +12,10 @@ export class TimerComponent implements OnInit {
   faPlay = faPlay;
   faStop = faStop;
 
-  control = null;
+  timeElm;
+  millisecondsElm;
+
+  interval;
   milliseconds = 0;
   seconds = 0;
   minutes = 0;
@@ -23,50 +26,54 @@ export class TimerComponent implements OnInit {
   }
 
   stopwatch() {
-    // milleseconds
-    if (this.milliseconds < 99) {
-      this.milliseconds++;
-      if (this.milliseconds < 10) { this.milliseconds += 0; }
-      // component receives data
-    }
-    if (this.milliseconds === 99) {
-      this.milliseconds = -1;
-    }
 
-    // seconds
-    if (this.seconds === 0) {
-      this.seconds++;
-      if (this.seconds < 10) { this.seconds += 0; }
-      // component receives data
-    }
-    if (this.seconds === 59) {
-      this.seconds = -1;
-    }
+    this.timeElm = document.getElementById('time');
+    this.millisecondsElm = document.getElementById('milliseconds');
 
-    // minutes
-    if (this.minutes === 0 && this.seconds === 0) {
-      this.minutes++;
-      if (this.minutes < 10) { this.minutes += 0; }
-      // component receives data
-    }
-    if (this.minutes === 59) {
-      this.minutes = -1;
-    }
+      // milleseconds
+      if (this.milliseconds < 99) {
+        this.milliseconds++;
+      }
+      if (this.milliseconds === 99) {
+        this.milliseconds = 0;
+      }
 
-    // show time
-    console.log(this.minutes + ':' + this.seconds + ':' + this.milliseconds);
+      // seconds
+      if (this.milliseconds === 0) {
+        this.seconds++;
+      }
+      if (this.seconds === 59) {
+        this.seconds = 0;
+      }
+
+      // minutes
+      if ((this.milliseconds === 0) && (this.seconds === 0)) {
+        this.minutes++;
+      }
+
+      // show
+      this.timeElm.innerHTML = ('0' + this.minutes).slice(-2) + ':' + ('0' + this.seconds).slice(-2) + ' ';
+      this.millisecondsElm.innerHTML = this.milliseconds;
   }
 
   startStopwatch() {
-    this.control = setInterval(this.stopwatch, 1000);
+    clearInterval(this.interval);
+    this.interval = setInterval(() =>  {
+      this.stopwatch();
+    }, 10);
   }
 
   pauseStopwatch() {
-    // TODO
+    clearInterval(this.interval);
   }
 
-  stopStopwatch() {
-    // TODO
+  restartStopwatch() {
+    this.milliseconds = 0,
+    this.seconds = 0,
+    this.minutes = 0;
+
+    clearInterval(this.interval);
+    this.startStopwatch();
   }
 
 }
