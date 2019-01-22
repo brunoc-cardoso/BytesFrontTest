@@ -1,0 +1,20 @@
+a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+#sidebar {
+  width: 220px;
+  position: fixed;
+  height: 100vh;
+  z-index: 999;
+  background: #2460A9;
+}
+
+.circle {
+  width: 140px;
+}
+
+.menu-item {
+  margin-top: 60px;
+}
