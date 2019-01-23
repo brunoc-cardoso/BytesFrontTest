@@ -4,7 +4,7 @@ a {
 }
 
 #sidebar {
-  width: 220px;
+  width: 16%;
   position: fixed;
   height: 100vh;
   z-index: 999;
