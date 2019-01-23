@@ -4,11 +4,13 @@ a {
 }
 
 #sidebar {
-  width: 16%;
-  position: fixed;
+  margin-top: -24px;
   height: 100vh;
-  z-index: 999;
   background: #2460A9;
+}
+
+.sidebar-header {
+  padding-top: 30px; 
 }
 
 .circle {

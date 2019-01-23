@@ -15,7 +15,7 @@ import { SidebarComponent } from './navigation/sidebar/sidebar.component';
     BlocksComponent,
     IconBarComponent,
     TimerComponent,
-    SidebarComponent
+    SidebarComponent,
   ],
   imports: [
     NgbModule,
