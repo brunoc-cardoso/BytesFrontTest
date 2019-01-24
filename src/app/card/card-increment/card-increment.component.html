@@ -1,0 +1,14 @@
+<div class="card">
+  <div class="card-body py-0 d-flex align-items-center justify-content-between">
+    <fa-icon [icon]="faShoppingCart" class="icon"></fa-icon>
+
+    <div id="counter" class="d-flex align-items-center flex-column">
+      <span id="counterTag" class="pl-2">0,000</span>
+      <span class="mt-0 pt-0">Orders</span>
+    </div>
+
+    <a href="#" id="increment-btn" class="btn" (click)="increment()">
+      <fa-icon [icon]="faPlus" class="green"></fa-icon> Increment
+    </a>
+  </div>
+</div>

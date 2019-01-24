@@ -7,35 +7,3 @@
   background-color: #F8F8F8;
   height: 100vh;
 }
-
-.card-block {
-  background-color: #2460A9;
-  width: 24%;
-  height: 65px;
-}
-
-span {
-  font-size: .7rem;
-}
-
-#counter {
-  font-size: 1.3rem;
-}
-
-.icon {
-  margin-left: 25px;
-  font-size: 2.2rem;
-}
-
-#increment-btn {
-  border-color: #114015;
-  color: #114015;
-  background-color: #7FE391;
-  font-size: 0.7rem;
-  padding: 5px;
-  
-}
-
-.green {
-  color: #114015;
-}

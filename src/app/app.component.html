@@ -3,31 +3,21 @@
     <app-sidebar></app-sidebar>
   </div>
   <div id="main" class="main col-10">
-    <div class="col-12">
-      <app-icon-bar></app-icon-bar>
+
+    <div class="row mb-3">
+      <app-icon-bar class="col-12"></app-icon-bar>
     </div>
-    <div class=" col-12 d-flex justify-content-between mt-3">
 
-      <!-- Para o mackup não, mas criaria um componente card -->
-      <div class="card-block p-0 d-flex align-items-center flex-wrap">
-        <fa-icon [icon]="faShoppingCard" class="icon"></fa-icon>
-
-        <div class="d-flex align-items-center flex-column mx-auto">
-          <span id="counter" class="ml-3 mt-1 mb-0">0,000</span>
-          <span class="mt-0 mb-2 p-0">Orders</span>
-        </div>
-
-        <a href="#" id="increment-btn" class="btn ml-auto mr-3" (click)="increment()">
-          <fa-icon [icon]="faPlus" class="green"></fa-icon> Increment
-        </a>
-      </div>
-      <div class="card-block p-0"></div>
-      <div class="card-block p-0"></div>
-      <div class="card-block p-0"></div>
-
+    <div class="row">
+      <app-card-increment class="col-lg-3 col-md-6"></app-card-increment>
+      <app-card class="col-lg-3 col-md-6"></app-card>
+      <app-card class="col-lg-3 col-md-6"></app-card>
+      <app-card class="col-lg-3 col-md-6"></app-card>
     </div>
-    <div class="col-12">
-      <app-timer></app-timer>
+
+    <div class="row">
+      <app-timer class="col-12"></app-timer>
     </div>
+
   </div>
 </div>

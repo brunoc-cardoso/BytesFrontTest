@@ -1,0 +1,31 @@
+.card {
+  height: 60px;
+  background-color: #2460A9;
+  border-radius: 0;
+}
+
+#counter {
+  font-size: 0.8rem;
+}
+
+#counterTag {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  font-size: 1.3rem;
+}
+
+#increment-btn {
+  border-color: #114015;
+  color: #114015;
+  background-color: #7FE391;
+  font-size: 0.7rem;
+  padding: 8px;
+}
+
+.green {
+  color: #114015;
+}
+
+.icon {
+  font-size: 2rem;
+}
