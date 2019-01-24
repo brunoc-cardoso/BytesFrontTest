@@ -20,3 +20,10 @@ a {
 .menu-item {
   margin-top: 60px;
 }
+
+/* medias */
+@media (max-width: 768px) { 
+  .item-icon {
+    display: none;
+  }
+}
