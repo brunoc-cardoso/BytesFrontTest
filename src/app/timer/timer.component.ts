@@ -25,8 +25,12 @@ export class TimerComponent implements OnInit {
   ngOnInit() {
   }
 
-  stopwatch() {
+  alterShowTime() {
+    this.timeElm.innerHTML = ('0' + this.minutes).slice(-2) + ':' + ('0' + this.seconds).slice(-2) + ' ';
+    this.millisecondsElm.innerHTML = ('0' + this.milliseconds).slice(-2);
+  }
 
+  stopwatch() {
     this.timeElm = document.getElementById('time');
     this.millisecondsElm = document.getElementById('milliseconds');
 
@@ -52,8 +56,7 @@ export class TimerComponent implements OnInit {
       }
 
       // show
-      this.timeElm.innerHTML = ('0' + this.minutes).slice(-2) + ':' + ('0' + this.seconds).slice(-2) + ' ';
-      this.millisecondsElm.innerHTML = this.milliseconds;
+      this.alterShowTime();
   }
 
   startStopwatch() {
@@ -73,7 +76,7 @@ export class TimerComponent implements OnInit {
     this.minutes = 0;
 
     clearInterval(this.interval);
-    this.startStopwatch();
+    this.alterShowTime();
   }
 
 }
